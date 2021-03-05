@@ -1,21 +1,21 @@
 import XCTest
 @testable import WizekodCore
 
-final class WizekodCoreTests: XCTestCase {
+final class WizekodColorTests: XCTestCase {
   
   func testColorRedEqual() {
-    let color = WizekodCore.colorFromHexString("FF0000")
+    let color = WizekodCore.Color.fromHexString("FF0000")
     XCTAssertEqual(color, .red)
   }
   
   func testWizekodColorsAreEqual() {
-    let color = WizekodCore.colorFromHexString("006736")
-    XCTAssertEqual(color, WizekodCore.wizekodColor)
+    let color = WizekodCore.Color.fromHexString("006736")
+    XCTAssertEqual(color, WizekodCore.Color.wizekodColor)
   }
   
   func testSecondaryWizekodColorsAreEqual() {
-    let color = WizekodCore.colorFromHexString("FCFFFD")
-    XCTAssertEqual(color, WizekodCore.secondaryWizekodColor)
+    let color = WizekodCore.Color.fromHexString("FCFFFD")
+    XCTAssertEqual(color, WizekodCore.Color.secondaryWizekodColor)
   }
   
   static var allTests = [
