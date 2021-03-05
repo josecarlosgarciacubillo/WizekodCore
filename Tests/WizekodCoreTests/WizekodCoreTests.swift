@@ -8,7 +8,13 @@ final class WizekodCoreTests: XCTestCase {
     XCTAssertEqual(color, .red)
   }
   
+  func testWizekodColorsAreEqual() {
+    let color = WizekodCore.colorFromHexString("006736")
+    XCTAssertEqual(color, WizekodCore.wizekodColor)
+  }
+  
   static var allTests = [
-    ("testColorRedEqual", testColorRedEqual)
+    ("testColorRedEqual", testColorRedEqual),
+    ("testWizekodColorsAreEqual", testWizekodColorsAreEqual)
   ]
 }

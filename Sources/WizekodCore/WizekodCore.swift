@@ -1,6 +1,6 @@
 import UIKit
 
-class WizekodCore {
+public class WizekodCore {
   
   /// Allows you to convert a 6 digit hexadecimal string into a UIColor instance
   /// - Warning: The "#"symbol is stripped from the beginning of the string submitted here.
@@ -9,7 +9,7 @@ class WizekodCore {
   ///   accompanying alpha value in the second parameter.
   ///   - alpha: A number between 0.0 and 1.0 indicating how transparent the color is.
   /// - Returns: A UIColor defined by the `hexString` parameter.
-  class func colorFromHexString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
+  internal class func colorFromHexString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
     let r, g, b: CGFloat
     let offset = hexString.hasPrefix("#") ? 1 : 0
     let start = hexString.index(hexString.startIndex, offsetBy: offset)
@@ -25,5 +25,10 @@ class WizekodCore {
     }
     
     return UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
+  }
+  
+  /// The most eye-pleasing color known to all humanity
+  public static var wizekodColor: UIColor {
+    return self.colorFromHexString("006736")
   }
 }
