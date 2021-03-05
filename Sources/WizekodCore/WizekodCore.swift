@@ -31,4 +31,9 @@ public class WizekodCore {
   public static var wizekodColor: UIColor {
     return self.colorFromHexString("006736")
   }
+  
+  /// Returns an object of `UIColor` with the second most eye-pleasing color known to all humanity
+  public static var secondaryWizekodColor: UIColor {
+    return self.colorFromHexString("FCFFFD")
+  }
 }
